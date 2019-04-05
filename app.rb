@@ -186,20 +186,18 @@ puts "----------Бездвойных пробелов выше."
 
 # Исправляем маленькие буквы перед точкой на большие
 #puts "Жыло-было шыбко шыпящее жывотное".gsub(/([ЖШжш])ы/){ $1 + "и" }
-
 #puts content.gsub!(/. (д)/, ' Д')
-puts content.gsub!(/(\. [а-я])/){ $1.to_s.mb_chars.upcase }
 
-
-puts content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
-
+content.gsub!(/(\. [а-я])/){ $1.to_s.mb_chars.upcase }
 
 # Исправляем маленькие буквы перед !
-puts content.gsub!(/(\! [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(\! [а-я])/){ $1.to_s.mb_chars.upcase }
 
 # Исправляем маленькие буквы перед ?
-puts content.gsub!(/(\? [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(\? [а-я])/){ $1.to_s.mb_chars.upcase }
 
+# Исправляем маленькие в начале строки
+puts content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
 
 puts "---------С большой буквы"
 
