@@ -1,12 +1,40 @@
+#encoding: cp866
 
-
-# ÐžÑ‚ÐºÑ€Ñ‹Ð²Ð°ÐµÐ¼ Ñ„Ð°Ð¹Ð» Ð½Ð°Ñ…Ð¾Ð´Ð¸Ð¼ Ñ„Ñ€Ð°Ð·Ñƒ Ð¸ Ð¿Ð¾Ð´Ð¼ÐµÐ½ÑÐµÐ¼ ÐµÐµ Ð½Ð° Ð¿ÑƒÑÑ‚Ð¾Ñ‚Ñƒ.
+# Žâªàë¢ ¥¬ ä ©« ­ å®¤¨¬ äà §ã ¨ ¯®¤¬¥­ï¥¬ ¥¥ ­  ¯ãáâ®âã.
 
 #logo_path = File.join( File.dirname(__FILE__), '../logo.txt' )
 #file = File.open( logo_path )
 
 
-# ÐžÑ‚ÐºÑ€Ñ‹Ð²Ð°ÐµÐ¼ Ñ„Ð°Ð¹Ð» text.txt
-content = File.readlines("text.txt")
+# Žâªàë¢ ¥¬ ä ©« text.txt
+content = File.read("text.txt")
+#puts content.class  
 
-puts content
+
+
+puts content   
+
+
+
+
+
+puts "------"
+
+
+# “¡¨à ¥¬ á«®¢  ¨§ â¥ªáâ  ¢ contents
+
+
+puts content.gsub!('ïàª®', '')
+
+
+
+# “¡¨à ¥¬ ¤¢®©­ë¥ ¯à®¡¥«ë ¢ contents
+
+puts content.gsub!('  ', ' ')
+
+
+
+
+#puts "à¨¢¥â ¯®ª ".class
+# puts "Terribly complex".gsub "complex", "simple" # => "Terribly simple"
+#  puts "à¨¢¥â ¯®ª ".gsub "¯®ª ", "¯à¨¢¥â" # => "Terribly simple"
