@@ -106,6 +106,8 @@ content.gsub!(/\bтак как\b/, '')
 
 content.gsub!(/\bвесьма\b/, '')
 
+content.gsub!(/\bочень\b/, '')
+
 content.gsub!(/\bвсего лишь\b/, '')
 content.gsub!(/\bлишь\b/, '')
 
@@ -187,6 +189,10 @@ puts "----------Бездвойных пробелов выше."
 
 #puts content.gsub!(/. (д)/, ' Д')
 puts content.gsub!(/(\. [а-я])/){ $1.to_s.mb_chars.upcase }
+
+
+puts content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
+
 
 # Исправляем маленькие буквы перед !
 puts content.gsub!(/(\! [а-я])/){ $1.to_s.mb_chars.upcase }
