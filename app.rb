@@ -23,10 +23,26 @@ puts "------"
 
 # Убираем слова из текста в contents
 
+puts content.gsub!(/\bярко\b/, '')
 
-puts content.gsub!('ярко', '')
+puts content.gsub!(/\bлучше всего\b/, 'лучше')
+
+# Проблема съедает часть слова
+# puts content.gsub!('боч', '') 
+# плохой вариант puts content.gsub!(/\bярко\b/, '')
+#'mislocated cat, vindicating'.gsub(/\bcat\b/, 'dog')
 
 
+# Убираем слова из текста в contents, если они начинаются с большой буквы
+
+#puts content.gsub!('Оптимальная', 'лучше')
+
+
+
+
+
+
+puts "Финальный"
 
 # Убираем двойные пробелы в contents
 
