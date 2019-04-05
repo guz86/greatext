@@ -54,9 +54,14 @@ puts "----------Бездвойных пробелов выше."
 #puts content.gsub!(/. (д)/, ' Д')
 puts content.gsub!(/(\. [а-я])/){ $1.to_s.mb_chars.upcase }
 
-puts "---------С большой буквы"
- 
+# Исправляем маленькие буквы перед !
+puts content.gsub!(/(\! [а-я])/){ $1.to_s.mb_chars.upcase }
 
+# Исправляем маленькие буквы перед ?
+puts content.gsub!(/(\? [а-я])/){ $1.to_s.mb_chars.upcase }
+
+
+puts "---------С большой буквы"
 
 #puts "Финальный"
 #puts content
