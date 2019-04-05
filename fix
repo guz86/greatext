@@ -1,0 +1,56 @@
+#encoding: cp866
+
+# ┼╜├в┬к├а├л┬в ┬е┬м ├д ┬й┬л ┬н ├е┬о┬д┬и┬м ├д├а ┬з├г ┬и ┬п┬о┬д┬м┬е┬н├п┬е┬м ┬е┬е ┬н ┬п├г├б├в┬о├в├г.
+
+#logo_path = File.join( File.dirname(__FILE__), '../logo.txt' )
+#file = File.open( logo_path )
+
+
+# ┼╜├в┬к├а├л┬в ┬е┬м ├д ┬й┬л text.txt
+content = File.read("text.txt")
+#puts content.class 
+
+
+
+puts content 
+
+
+
+
+
+puts "------"
+
+
+# тАЬ┬б┬и├а ┬е┬м ├б┬л┬о┬в ┬и┬з ├в┬е┬к├б├в ┬в contents
+
+puts content.gsub!(/\b├п├а┬к┬о\b/, '')
+
+puts content.gsub!(/\b┬л├г├з├и┬е ┬в├б┬е┬г┬о\b/, '┬л├г├з├и┬е')
+
+# ┬П├а┬о┬б┬л┬е┬м ├б├к┬е┬д ┬е├в ├з ├б├в├м ├б┬л┬о┬в 
+# puts content.gsub!('┬б┬о├з', '') 
+# ┬п┬л┬о├е┬о┬й ┬в ├а┬и ┬н├в puts content.gsub!(/\b├п├а┬к┬о\b/, '')
+#'mislocated cat, vindicating'.gsub(/\bcat\b/, 'dog')
+
+
+# тАЬ┬б┬и├а ┬е┬м ├б┬л┬о┬в ┬и┬з ├в┬е┬к├б├в ┬в contents, ┬е├б┬л┬и ┬о┬н┬и ┬н ├з┬и┬н ├о├в├б├п ├б ┬б┬о┬л├м├и┬о┬й ┬б├г┬к┬в├л
+
+#puts content.gsub!('┼╜┬п├в┬и┬м ┬л├м┬н ├п', '┬л├г├з├и┬е')
+
+
+
+
+
+
+puts "тАЭ┬и┬н ┬л├м┬н├л┬й"
+
+# тАЬ┬б┬и├а ┬е┬м ┬д┬в┬о┬й┬н├л┬е ┬п├а┬о┬б┬е┬л├л ┬в contents
+
+puts content.gsub!(' ', ' ')
+
+
+
+
+#puts "┬П├а┬и┬в┬е├в ┬п┬о┬к ".class
+# puts "Terribly complex".gsub "complex", "simple" # => "Terribly simple"
+# puts "┬П├а┬и┬в┬е├в ┬п┬о┬к ".gsub "┬п┬о┬к ", "┬п├а┬и┬в┬е├в" # => "Terribly simple"
