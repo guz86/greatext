@@ -197,7 +197,26 @@ content.gsub!(/(\! [а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!(/(\? [а-я])/){ $1.to_s.mb_chars.upcase }
 
 # Исправляем маленькие в начале строки
-puts content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
+
+
+# Исправляем маленькие в начале строки учитываем strong li h3 h2 [note]
+# <strong>
+content.gsub!(/(<strong>[а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!(/(<STRONG>)/){ $1.to_s.mb_chars.downcase }
+content.gsub!('<STRONG>', '<strong>')
+# <li>
+content.gsub!(/(<li>[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('<LI>', '<li>')
+# <h2>
+content.gsub!(/(<h2>[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('<H2>', '<h2>')
+# <h3>
+content.gsub!(/(<h3>[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('<H3>', '<h3>')
+# [note]
+content.gsub!(/(\[note\][а-я])/){ $1.to_s.mb_chars.upcase }
+puts  content.gsub!('[NOTE]', '[note]')
 
 puts "---------С большой буквы"
 
