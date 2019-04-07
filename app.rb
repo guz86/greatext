@@ -38,19 +38,19 @@ content.gsub!(/\bкроме этого\b/, '')
 content.gsub!(/\bкроме того, \b/, '')
 content.gsub!(/\bкроме того\b/, '')
 
-content.gsub!(/\bтаким образом,\b/, '')
+content.gsub!(/\bтаким образом, \b/, '')
 content.gsub!(/\bтаким образом\b/, '')
 
-content.gsub!(/\bтаким образом,\b/, '')
+content.gsub!(/\bтаким образом, \b/, '')
 content.gsub!(/\bтаким образом\b/, '')
 
-content.gsub!(/\bа также,\b/, '')
+content.gsub!(/\bа также, \b/, '')
 content.gsub!(/\bа также\b/, '')
 
-content.gsub!(/\bтакже,\b/, '')
+content.gsub!(/\bтакже, \b/, '')
 content.gsub!(/\bтакже\b/, '')
 
-content.gsub!(/\bпри этом,\b/, '')
+content.gsub!(/\bпри этом, \b/, '')
 content.gsub!(/\bпри этом\b/, '')
 
 content.gsub!(/\bследует учесть, что\b/, '')
@@ -71,32 +71,32 @@ content.gsub!(/\bследует заметить что\b/, '')
 content.gsub!(/\bследует помнить, что\b/, '')
 content.gsub!(/\bследует помнить что\b/, '')
 
-content.gsub!(/\bв этом случае,\b/, '')
+content.gsub!(/\bв этом случае, \b/, '')
 content.gsub!(/\bв этом случае\b/, '')
 
-content.gsub!(/\bв таком случае,\b/, '')
+content.gsub!(/\bв таком случае, \b/, '')
 content.gsub!(/\bв таком случае\b/, '')
 
-content.gsub!(/\bв такой ситуации,\b/, '')
+content.gsub!(/\bв такой ситуации, \b/, '')
 content.gsub!(/\bв такой ситуации\b/, '')
 
-content.gsub!(/\bв этой ситуации,\b/, '')
+content.gsub!(/\bв этой ситуации, \b/, '')
 content.gsub!(/\bв этой ситуации\b/, '')
 
 content.gsub!(/\bпосле этого периода\b/, '')
 content.gsub!(/\bпосле этого срока\b/, '')
-content.gsub!(/\bпосле этого,\b/, '')
+content.gsub!(/\bпосле этого, \b/, '')
 content.gsub!(/\bпосле этого\b/, '')
 
-content.gsub!(/\bиз–за этого,\b/, '')
+content.gsub!(/\bиз–за этого, \b/, '')
 content.gsub!(/\bиз–за этого\b/, '')
 
-content.gsub!(/\bпомимо этого,\b/, '')
+content.gsub!(/\bпомимо этого, \b/, '')
 content.gsub!(/\bпомимо этого\b/, '')
 
 content.gsub!(/\bвполне\b/, '')
 
-content.gsub!(/\bтем не менее,\b/, '')
+content.gsub!(/\bтем не менее, \b/, '')
 content.gsub!(/\bтем не менее\b/, '')
 
 content.gsub!(/\bдля того,\b/, '')
@@ -111,10 +111,10 @@ content.gsub!(/\bочень\b/, '')
 content.gsub!(/\bвсего лишь\b/, '')
 content.gsub!(/\bлишь\b/, '')
 
-content.gsub!(/\bв том случае,\b/, '')
+content.gsub!(/\bв том случае, \b/, '')
 content.gsub!(/\bв том случае\b/, '')
 
-content.gsub!(/\bв данном случае,\b/, '')
+content.gsub!(/\bв данном случае, \b/, '')
 content.gsub!(/\bв данном случае\b/, '')
 
 content.gsub!(/\bкакого-либо\b/, '')
@@ -127,15 +127,15 @@ content.gsub!(/\bименно\b/, '')
 content.gsub!(/\bне редко\b/, '')
 content.gsub!(/\bнередко\b/, '')
 
-content.gsub!(/\bвпрочем,\b/, '')
+content.gsub!(/\bвпрочем, \b/, '')
 content.gsub!(/\bвпрочем\b/, '')
 
-content.gsub!(/\bв наше время,\b/, '')
+content.gsub!(/\bв наше время, \b/, '')
 content.gsub!(/\bв наше время\b/, '')
 
 content.gsub!(/\bпрактически\b/, '')
 
-content.gsub!(/\bна самом деле,\b/, '')
+content.gsub!(/\bна самом деле, \b/, '')
 content.gsub!(/\bна самом деле\b/, '')
 
 content.gsub!(/\bстоит отметить, что\b/, '')
@@ -166,17 +166,17 @@ content.gsub!(/\bэтого\b/, '')           #это надо добавить 
 
 
 #puts content.gsub!(/\bОптимальная\b/, '')
-puts content.gsub!(/\bТаким образом, \b/, '')
-puts content.gsub!(/Кстати, \b/, '')
+ content.gsub!(/Таким образом, \b/, '')
+ content.gsub!(/Кстати, \b/, '')
 
-puts "-----------Без слов с большой буквы"
+#puts "-----------Без слов с большой буквы"
 
 # Убираем двойные, тройные пробелы из текста
 
-puts content.gsub!('   ', ' ')
-puts content.gsub!('  ', ' ')
+content.gsub!('   ', ' ')
+content.gsub!('  ', ' ')
 
-puts "----------Бездвойных пробелов выше."
+#puts "----------Бездвойных пробелов выше."
 
 
 # ПОПРАВИТЬ ПРОБЕЛ ЗАПЯТАЯ !!!!!!!!!!
