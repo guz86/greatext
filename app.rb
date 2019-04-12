@@ -279,7 +279,8 @@ content.gsub!(/\bна самом деле, \b/, '')
 content.gsub!(/\bна самом деле\b/, '')
 
 content.gsub!(/\bстоит отметить, что\b/, '')
-content.gsub!(/\bстоит отметить что\b/, '')=end
+content.gsub!(/\bстоит отметить что\b/, '')
+=end
 
 
 
