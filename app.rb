@@ -77,6 +77,9 @@ content.gsub!(/\bв такой ситуации\b/, '')
 content.gsub!(/\bв этой ситуации, \b/, '')
 content.gsub!(/\bв этой ситуации\b/, '')
 
+content.gsub!(/\bв таких случаях, \b/, '')
+content.gsub!(/\bв таких случаях\b/, '')
+
 content.gsub!(/\bпосле этого периода\b/, '')
 content.gsub!(/\bпосле этого срока\b/, '')
 
@@ -173,6 +176,20 @@ content.gsub!(/\bв частности \b/, '')
 
 content.gsub!(/\bналичии проблем\b/, 'пробемах')
 
+content.gsub!(/\bкак правило, \b/, '')
+content.gsub!(/\bкак правило \b/, '')
+
+content.gsub!(/\bявляется результатом\b/, 'результат')
+
+content.gsub!(/\bмогут быть связаны\b/, 'связаны')
+
+content.gsub!(/\bследующие\b/, '')
+
+content.gsub!(/\bдолгое время\b/, 'долго')
+
+content.gsub!(/\bнекоторых людей\b/, 'некоторых')
+
+
 # медицинские ошибки
 content.gsub!(/\bмедикаментозных\b/, '')
 content.gsub!(/\bмедикаментозные\b/, '')
@@ -190,6 +207,7 @@ content.gsub!(/\bнедугов\b/, 'болезней')
 content.gsub!(/\bнедугам\b/, 'болезням')
 content.gsub!(/\bнедугами\b/, 'болезнями')
 content.gsub!(/\bнедугах\b/, 'болезнях')
+content.gsub!(/\bвсех болезней\b/, 'болезней')
 
 
 # Проблема съедает часть слова
@@ -292,6 +310,10 @@ content.gsub!(/В том случае \b/, '')
 content.gsub!(/В данном случае, \b/, '')
 content.gsub!(/В данном случае \b/, '')
 
+content.gsub!(/В таких случаях, \b/, '')
+content.gsub!(/В таких случаях \b/, '')
+
+
 content.gsub!(/Какого-либо \b/, '')
 
 content.gsub!(/Сегодня \b/, '')
@@ -332,6 +354,9 @@ content.gsub!(/На сегодняшний день \b/, '')
 content.gsub!(/К сожалению, \b/, '')
 content.gsub!(/К сожалению \b/, '')
 
+content.gsub!(/Как правило, \b/, '')
+content.gsub!(/Как правило \b/, '')
+
 content.gsub!(/Одна из самых\b/, 'Одна из')
 
 content.gsub!(/Зачастую, \b/, '')
@@ -347,6 +372,14 @@ content.gsub!(/В большинстве случаев \b/, '')
 content.gsub!(/Важно помнить, что \b/, '')
 content.gsub!(/Важно помнить что \b/, '')
 content.gsub!(/Важно помнить: \b/, '')
+
+content.gsub!(/Принято считать, что \b/, '')
+content.gsub!(/Принято считать что \b/, '')
+
+content.gsub!(/На самом деле \b/, '')
+
+content.gsub!(/Далее, \b/, '')
+content.gsub!(/Далее \b/, '')
 
 #########
 
