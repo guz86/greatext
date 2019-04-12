@@ -1,5 +1,8 @@
 # encoding: utf-8
 
+# 886 кодировка не поддерживает некоторые спецсимволы
+# перед проверкой файла заменить — на -    « »  на "  –  на  -  
+
 
 # для .mb_chars.upcase
 require "active_support/all"
@@ -16,9 +19,9 @@ content = File.read("text.txt")
 #putscontent.class  
 content.encode!('utf-8')
 
-puts content   
+#puts content   
 
-puts "------Оригинал"
+#puts "------Оригинал"
 
 #ПУНКТ 1. Убираем слова паразиты вcontents
 
@@ -443,7 +446,15 @@ content.gsub!('<H2>', '<h2>')
 # <h3>
 content.gsub!(/(<h3>[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<H3>', '<h3>')
-
+# />  перед картинкой
+content.gsub!(/(\/> [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(\/>[а-я])/){ $1.to_s.mb_chars.upcase }
+# alt=" первая буква в альте картинки
+content.gsub!(/(alt="[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('ALT="', 'alt="')
+# title=" первая буква в title картинки
+content.gsub!(/(title="[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('TITLE="', 'title="')
 # [note]
 content.gsub!(/(\[note\][а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('[NOTE]', '[note]')
