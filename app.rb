@@ -13,14 +13,14 @@ require "active_support/all"
 
 # Открываем файл text.txt
 content = File.read("text.txt")
-#puts content.class  
+#putscontent.class  
 content.encode!('utf-8')
 
 puts content   
 
 puts "------Оригинал"
 
-#ПУНКТ 1. Убираем слова паразиты в contents
+#ПУНКТ 1. Убираем слова паразиты вcontents
 
 # сначало длинное, потом с запятой, потом короткое слово.
 
@@ -133,137 +133,186 @@ content.gsub!(/\bна самом деле\b/, '')
 content.gsub!(/\bстоит отметить, что\b/, '')
 content.gsub!(/\bстоит отметить что\b/, '')
 
+content.gsub!(/\bизвестно, что\b/, '')
+content.gsub!(/\bизвестно что\b/, '')
+
+content.gsub!(/\bв любом случае, \b/, '')
+content.gsub!(/\bв любом случае \b/, '')
+
+content.gsub!(/\bплюс ко всему, \b/, '')
+content.gsub!(/\bплюс ко всему \b/, '')
+
+content.gsub!(/\bжелаемых результатов\b/, 'результатов')
+content.gsub!(/\bжелаемые результаты\b/, 'результаты')
+
+content.gsub!(/\bна сегодняшний день \b/, '')
+
+content.gsub!(/\bк сожалению, \b/, '')
+content.gsub!(/\bк сожалению \b/, '')
+
+content.gsub!(/\bодна из самых\b/, 'одна из')
 
 
-
+# медицинские ошибки
+content.gsub!(/\bмедикаментозных\b/, '')
+content.gsub!(/\bмедикаментозные\b/, '')
+content.gsub!(/\bмедикаментозный\b/, '')
+content.gsub!(/\bчеловеческого\b/, '')
+content.gsub!(/\bчеловеческие\b/, '')
+content.gsub!(/\bчеловеческий\b/, '')
+content.gsub!(/\bнедуга\b/, 'болезни')
+content.gsub!(/\bнедуге\b/, 'болезни')
+content.gsub!(/\bнедугом\b/, 'болезнью')
+content.gsub!(/\bнедугу\b/, 'болезни')
+content.gsub!(/\bнедуг\b/, 'болезнь')
+content.gsub!(/\bнедуги\b/, 'болезни')
+content.gsub!(/\bнедугов\b/, 'болезней')
+content.gsub!(/\bнедугам\b/, 'болезням')
+content.gsub!(/\bнедугами\b/, 'болезнями')
+content.gsub!(/\bнедугах\b/, 'болезнях')
 
 
 # Проблема съедает часть слова
-# puts content.gsub!('боч', '') 
-# плохой вариант puts content.gsub!(/\bярко\b/, '')
+# putscontent.gsub!('боч', '') 
+# плохой вариант putscontent.gsub!(/\bярко\b/, '')
 #'mislocated cat, vindicating'.gsub(/\bcat\b/, 'dog')
 
 
-#ПУНКТ 2. Убираем слова из текста в contents, если они начинаются с большой буквы
+#ПУНКТ 2. Убираем слова из текста вcontents, если они начинаются с большой буквы
 
-#puts content.gsub!('Оптимальная', 'лучше')
-#puts content.gsub!(/\bОптимальная\b/, '')
+#putscontent.gsub!('Оптимальная', 'лучше')
+#putscontent.gsub!(/\bОптимальная\b/, '')
 
- content.gsub!(/Таким образом, \b/, '')
- content.gsub!(/Таким образом \b/, '')
+content.gsub!(/Таким образом, \b/, '')
+content.gsub!(/Таким образом \b/, '')
 
- content.gsub!(/Кстати, \b/, '')
- content.gsub!(/Кстати \b/, '')
+content.gsub!(/Кстати, \b/, '')
+content.gsub!(/Кстати \b/, '')
 
- content.gsub!(/Лучше всего, \b/, 'Лучше ')
- content.gsub!(/Лучше всего \b/, 'Лучше ')
+content.gsub!(/Лучше всего, \b/, 'Лучше ')
+content.gsub!(/Лучше всего \b/, 'Лучше ')
 
- content.gsub!(/Чаще всего, \b/, 'Чаще ')
- content.gsub!(/Чаще всего \b/, 'Чаще ')
+content.gsub!(/Чаще всего, \b/, 'Чаще ')
+content.gsub!(/Чаще всего \b/, 'Чаще ')
 
- content.gsub!(/Прежде всего, \b/, '')
- content.gsub!(/Прежде всего \b/, '')
+content.gsub!(/Прежде всего, \b/, '')
+content.gsub!(/Прежде всего \b/, '')
 
- content.gsub!(/Кроме этого, \b/, '')
- content.gsub!(/Кроме этого \b/, '')
+content.gsub!(/Кроме этого, \b/, '')
+content.gsub!(/Кроме этого \b/, '')
 
- content.gsub!(/Кроме того, \b/, '')
- content.gsub!(/Кроме того \b/, '')
+content.gsub!(/Кроме того, \b/, '')
+content.gsub!(/Кроме того \b/, '')
 
- content.gsub!(/А также, \b/, '')
- content.gsub!(/А также \b/, '')
+content.gsub!(/А также, \b/, '')
+content.gsub!(/А также \b/, '')
 
- content.gsub!(/Также, \b/, '')
- content.gsub!(/Также \b/, '')
+content.gsub!(/Также, \b/, '')
+content.gsub!(/Также \b/, '')
 
- content.gsub!(/При этом, \b/, '')
- content.gsub!(/При этом \b/, '')
+content.gsub!(/При этом, \b/, '')
+content.gsub!(/При этом \b/, '')
 
- content.gsub!(/Следует учесть, что \b/, '')
- content.gsub!(/Следует учесть что \b/, '')
+content.gsub!(/Следует учесть, что \b/, '')
+content.gsub!(/Следует учесть что \b/, '')
 
- content.gsub!(/Следует знать, что \b/, '')
- content.gsub!(/Следует знать что \b/, '')
+content.gsub!(/Следует знать, что \b/, '')
+content.gsub!(/Следует знать что \b/, '')
 
- content.gsub!(/Следует помнить, что \b/, '')
- content.gsub!(/Следует помнить что \b/, '')
+content.gsub!(/Следует помнить, что \b/, '')
+content.gsub!(/Следует помнить что \b/, '')
 
- content.gsub!(/Следует заметить, что \b/, '')
- content.gsub!(/Следует заметить что \b/, '')
+content.gsub!(/Следует заметить, что \b/, '')
+content.gsub!(/Следует заметить что \b/, '')
 
- content.gsub!(/В этом случае, \b/, '')
- content.gsub!(/В этом случае \b/, '')
+content.gsub!(/В этом случае, \b/, '')
+content.gsub!(/В этом случае \b/, '')
 
- content.gsub!(/В таком случае, \b/, '')
- content.gsub!(/В таком случае \b/, '')
+content.gsub!(/В таком случае, \b/, '')
+content.gsub!(/В таком случае \b/, '')
 
- content.gsub!(/В такой ситуации, \b/, '')
- content.gsub!(/В такой ситуации \b/, '')
+content.gsub!(/В такой ситуации, \b/, '')
+content.gsub!(/В такой ситуации \b/, '')
 
- content.gsub!(/В этой ситуации, \b/, '')
- content.gsub!(/В этой ситуации \b/, '')
+content.gsub!(/В этой ситуации, \b/, '')
+content.gsub!(/В этой ситуации \b/, '')
 
- content.gsub!(/После этого периода, \b/, '')
- content.gsub!(/После этого периода \b/, '')
+content.gsub!(/После этого периода, \b/, '')
+content.gsub!(/После этого периода \b/, '')
 
- content.gsub!(/После этого срока, \b/, '')
- content.gsub!(/После этого срока \b/, '')
+content.gsub!(/После этого срока, \b/, '')
+content.gsub!(/После этого срока \b/, '')
 
- content.gsub!(/После этого, \b/, '')
- content.gsub!(/После этого \b/, '')
+content.gsub!(/После этого, \b/, '')
+content.gsub!(/После этого \b/, '')
 
- content.gsub!(/Из-за этого, \b/, '')
- content.gsub!(/Из-за этого \b/, '')
+content.gsub!(/Из-за этого, \b/, '')
+content.gsub!(/Из-за этого \b/, '')
 
- content.gsub!(/Помимо этого, \b/, '')
- content.gsub!(/Помимо этого \b/, '')
+content.gsub!(/Помимо этого, \b/, '')
+content.gsub!(/Помимо этого \b/, '')
 
- content.gsub!(/Тем не менее, \b/, '')
- content.gsub!(/Тем не менее \b/, '')
+content.gsub!(/Тем не менее, \b/, '')
+content.gsub!(/Тем не менее \b/, '')
 
- content.gsub!(/Для того, \b/, '')
- content.gsub!(/Для того \b/, '')
+content.gsub!(/Для того, \b/, '')
+content.gsub!(/Для того \b/, '')
 
- content.gsub!(/Весьма \b/, '')
+content.gsub!(/Весьма \b/, '')
 
- content.gsub!(/Очень \b/, '')
+content.gsub!(/Очень \b/, '')
 
- content.gsub!(/Всего лишь \b/, '')
+content.gsub!(/Всего лишь \b/, '')
 
- content.gsub!(/Лишь \b/, '')
+content.gsub!(/Лишь \b/, '')
 
- content.gsub!(/В том случае, \b/, '')
- content.gsub!(/В том случае \b/, '')
+content.gsub!(/В том случае, \b/, '')
+content.gsub!(/В том случае \b/, '')
 
- content.gsub!(/В данном случае, \b/, '')
- content.gsub!(/В данном случае \b/, '')
+content.gsub!(/В данном случае, \b/, '')
+content.gsub!(/В данном случае \b/, '')
 
- content.gsub!(/Какого-либо \b/, '')
+content.gsub!(/Какого-либо \b/, '')
 
- content.gsub!(/Сегодня \b/, '')
+content.gsub!(/Сегодня \b/, '')
 
- content.gsub!(/Именно \b/, '')
+content.gsub!(/Именно \b/, '')
 
- content.gsub!(/Не редко, \b/, '')
- content.gsub!(/Не редко \b/, '')
+content.gsub!(/Не редко, \b/, '')
+content.gsub!(/Не редко \b/, '')
 
- content.gsub!(/Нередко, \b/, '')
- content.gsub!(/Нередко \b/, '')
+content.gsub!(/Нередко, \b/, '')
+content.gsub!(/Нередко \b/, '')
 
- content.gsub!(/Впрочем, \b/, '')
- content.gsub!(/Впрочем \b/, '')
+content.gsub!(/Впрочем, \b/, '')
+content.gsub!(/Впрочем \b/, '')
 
- content.gsub!(/В наше время, \b/, '')
- content.gsub!(/В наше время \b/, '')
+content.gsub!(/В наше время, \b/, '')
+content.gsub!(/В наше время \b/, '')
 
- content.gsub!(/Практически \b/, '')
+content.gsub!(/Практически \b/, '')
 
- content.gsub!(/На самом деле, \b/, '')
- content.gsub!(/На самом деле \b/, '')
+content.gsub!(/На самом деле, \b/, '')
+content.gsub!(/На самом деле \b/, '')
 
- content.gsub!(/Стоит отметить, что \b/, '')
- content.gsub!(/Стоит отметить что \b/, '')
+content.gsub!(/Стоит отметить, что \b/, '')
+content.gsub!(/Стоит отметить что \b/, '')
 
+content.gsub!(/Известно, что \b/, '')
+content.gsub!(/Известно что \b/, '')
+
+content.gsub!(/В любом случае, \b/, '')
+content.gsub!(/В любом случае \b/, '')
+
+content.gsub!(/Плюс ко всему, \b/, '')
+content.gsub!(/Плюс ко всему \b/, '')
+
+content.gsub!(/На сегодняшний день \b/, '')
+
+content.gsub!(/К сожалению, \b/, '')
+content.gsub!(/К сожалению \b/, '')
+
+content.gsub!(/Одна из самых\b/, 'Одна из')
 
 
 
@@ -332,7 +381,7 @@ content.gsub!('?</h4>', '</h4>')
 #ПУНКТ 4. Исправляем маленькие буквы перед знаками препинания и тегами на большие
 
 #puts "Жыло-было шыбко шыпящее жывотное".gsub(/([ЖШжш])ы/){ $1 + "и" }
-#puts content.gsub!(/. (д)/, ' Д')
+#putscontent.gsub!(/. (д)/, ' Д')
 content.gsub!(/(\. [а-я])/){ $1.to_s.mb_chars.upcase }
 
 # Исправляем маленькие буквы перед !
