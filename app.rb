@@ -41,9 +41,6 @@ content.gsub!(/\bкроме того\b/, '')
 content.gsub!(/\bтаким образом, \b/, '')
 content.gsub!(/\bтаким образом\b/, '')
 
-content.gsub!(/\bтаким образом, \b/, '')
-content.gsub!(/\bтаким образом\b/, '')
-
 content.gsub!(/\bа также, \b/, '')
 content.gsub!(/\bа также\b/, '')
 
@@ -167,17 +164,135 @@ content.gsub!(/\bэтого\b/, '')           #это надо добавить 
 
 #puts content.gsub!(/\bОптимальная\b/, '')
  content.gsub!(/Таким образом, \b/, '')
+ content.gsub!(/Таким образом \b/, '')
+
  content.gsub!(/Кстати, \b/, '')
+ content.gsub!(/Кстати \b/, '')
+
+#########################
+=begin
+content.gsub!(/\bлучше всего\b/, 'лучше')
+
+content.gsub!(/\bчаще всего\b/, 'чаще')
+
+content.gsub!(/\bпрежде всего, \b/, '')
+content.gsub!(/\bпрежде всего\b/, '')
+
+content.gsub!(/\bкроме этого, \b/, '')
+content.gsub!(/\bкроме этого\b/, '')
+
+content.gsub!(/\bкроме того, \b/, '')
+content.gsub!(/\bкроме того\b/, '')
+
+content.gsub!(/\bа также, \b/, '')
+content.gsub!(/\bа также\b/, '')
+
+content.gsub!(/\bтакже, \b/, '')
+content.gsub!(/\bтакже\b/, '')
+
+content.gsub!(/\bпри этом, \b/, '')
+content.gsub!(/\bпри этом\b/, '')
+
+content.gsub!(/\bследует учесть, что\b/, '')
+content.gsub!(/\bследует учесть что\b/, '')
+
+content.gsub!(/\bследует знать, что\b/, '')
+content.gsub!(/\bследует знать что\b/, '')
+
+content.gsub!(/\bследует помнить, что\b/, '')
+content.gsub!(/\bследует помнить что\b/, '')
+
+content.gsub!(/\bследует учесть, что\b/, '')
+content.gsub!(/\bследует учесть что\b/, '')
+
+content.gsub!(/\bследует заметить, что\b/, '')
+content.gsub!(/\bследует заметить что\b/, '')
+
+content.gsub!(/\bследует помнить, что\b/, '')
+content.gsub!(/\bследует помнить что\b/, '')
+
+content.gsub!(/\bв этом случае, \b/, '')
+content.gsub!(/\bв этом случае\b/, '')
+
+content.gsub!(/\bв таком случае, \b/, '')
+content.gsub!(/\bв таком случае\b/, '')
+
+content.gsub!(/\bв такой ситуации, \b/, '')
+content.gsub!(/\bв такой ситуации\b/, '')
+
+content.gsub!(/\bв этой ситуации, \b/, '')
+content.gsub!(/\bв этой ситуации\b/, '')
+
+content.gsub!(/\bпосле этого периода\b/, '')
+content.gsub!(/\bпосле этого срока\b/, '')
+content.gsub!(/\bпосле этого, \b/, '')
+content.gsub!(/\bпосле этого\b/, '')
+
+content.gsub!(/\bиз–за этого, \b/, '')
+content.gsub!(/\bиз–за этого\b/, '')
+
+content.gsub!(/\bпомимо этого, \b/, '')
+content.gsub!(/\bпомимо этого\b/, '')
+
+content.gsub!(/\bвполне\b/, '')
+
+content.gsub!(/\bтем не менее, \b/, '')
+content.gsub!(/\bтем не менее\b/, '')
+
+content.gsub!(/\bдля того,\b/, '')
+content.gsub!(/\bдля того\b/, '')
+
+content.gsub!(/\bтак как\b/, '')
+
+content.gsub!(/\bвесьма\b/, '')
+
+content.gsub!(/\bочень\b/, '')
+
+content.gsub!(/\bвсего лишь\b/, '')
+content.gsub!(/\bлишь\b/, '')
+
+content.gsub!(/\bв том случае, \b/, '')
+content.gsub!(/\bв том случае\b/, '')
+
+content.gsub!(/\bв данном случае, \b/, '')
+content.gsub!(/\bв данном случае\b/, '')
+
+content.gsub!(/\bкакого-либо\b/, '')
+
+content.gsub!(/\bсегодня\b/, '')
+
+content.gsub!(/\bа именно\b/, '')
+content.gsub!(/\bименно\b/, '')
+
+content.gsub!(/\bне редко\b/, '')
+content.gsub!(/\bнередко\b/, '')
+
+content.gsub!(/\bвпрочем, \b/, '')
+content.gsub!(/\bвпрочем\b/, '')
+
+content.gsub!(/\bв наше время, \b/, '')
+content.gsub!(/\bв наше время\b/, '')
+
+content.gsub!(/\bпрактически\b/, '')
+
+content.gsub!(/\bна самом деле, \b/, '')
+content.gsub!(/\bна самом деле\b/, '')
+
+content.gsub!(/\bстоит отметить, что\b/, '')
+content.gsub!(/\bстоит отметить что\b/, '')=end
+
+
+
 
 #puts "-----------Без слов с большой буквы"
 
-# Убираем двойные, тройные пробелы из текста
 
+
+#ПУНКТ 3. Исправляем проблемы со знаками препинания и двойные, тройные пробелы
+
+# Убираем двойные, тройные пробелы из текста
 content.gsub!('   ', ' ')
 content.gsub!('  ', ' ')
-
-#puts "----------Бездвойных пробелов выше."
-
 
 # ПОПРАВИТЬ ПРОБЕЛ ЗАПЯТАЯ !!!!!!!!!!
 content.gsub!(' ,', ',')
@@ -191,10 +306,11 @@ content.gsub!(' ?', '?')
 # ПОПРАВИТЬ ПРОБЕЛ ! !!!!!!!!!!
 content.gsub!(' !', '!')
 
-# Исправляем маленькие буквы перед точкой на большие
+
+#ПУНКТ 4. Исправляем маленькие буквы перед знаками препинания и тегами на большие
+
 #puts "Жыло-было шыбко шыпящее жывотное".gsub(/([ЖШжш])ы/){ $1 + "и" }
 #puts content.gsub!(/. (д)/, ' Д')
-
 content.gsub!(/(\. [а-я])/){ $1.to_s.mb_chars.upcase }
 
 # Исправляем маленькие буквы перед !
@@ -212,6 +328,9 @@ content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!(/(<strong>[а-я])/){ $1.to_s.mb_chars.upcase }
 #content.gsub!(/(<STRONG>)/){ $1.to_s.mb_chars.downcase }
 content.gsub!('<STRONG>', '<strong>')
+
+
+
 # <li>
 content.gsub!(/(<li>[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<LI>', '<li>')
