@@ -328,8 +328,16 @@ content.gsub!('[important] ', '[important]')
 # ПОПРАВИТЬ ПРОБЕЛ [help]
 content.gsub!('[help] ', '[help]')
 
-
-
+# Знаки препинания в подзаголовках </h2> </h3> </h4> 
+content.gsub!('.</h2>', '</h2>')
+content.gsub!('!</h2>', '</h2>')
+content.gsub!('?</h2>', '</h2>')
+content.gsub!('.</h3>', '</h3>')
+content.gsub!('!</h3>', '</h3>')
+content.gsub!('?</h3>', '</h3>')
+content.gsub!('.</h4>', '</h4>')
+content.gsub!('!</h4>', '</h4>')
+content.gsub!('?</h4>', '</h4>')
 
 
 #ПУНКТ 4. Исправляем маленькие буквы перед знаками препинания и тегами на большие
@@ -403,12 +411,11 @@ content.gsub!('[HELP]', '[help]')
 # [/help]
 content.gsub!(/(\[\/help\] [а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('[/HELP]', '[/help]')
- 
-puts content
-puts "---------С большой буквы"
 
-#puts "Финальный"
-#puts content
+
+puts "Финальный"
+puts content
+
 
 #puts "Привет пока".class
 # puts "Terribly complex".gsub "complex", "simple" # => "Terribly simple"
