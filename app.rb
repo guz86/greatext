@@ -316,6 +316,21 @@ content.gsub!('<td> ', '<td>')
 # ПОПРАВИТЬ ПРОБЕЛ [note]
 content.gsub!('[note] ', '[note]')
 
+# ПОПРАВИТЬ ПРОБЕЛ [tip]
+content.gsub!('[tip] ', '[tip]')
+
+# ПОПРАВИТЬ ПРОБЕЛ [warning]
+content.gsub!('[warning] ', '[warning]')
+
+# ПОПРАВИТЬ ПРОБЕЛ [important]
+content.gsub!('[important] ', '[important]')
+
+# ПОПРАВИТЬ ПРОБЕЛ [help]
+content.gsub!('[help] ', '[help]')
+
+
+
+
 
 #ПУНКТ 4. Исправляем маленькие буквы перед знаками препинания и тегами на большие
 
@@ -353,13 +368,43 @@ content.gsub!('<H2>', '<h2>')
 # <h3>
 content.gsub!(/(<h3>[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<H3>', '<h3>')
+
 # [note]
 content.gsub!(/(\[note\][а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('[NOTE]', '[note]')
 # [/note]
 content.gsub!(/(\[\/note\] [а-я])/){ $1.to_s.mb_chars.upcase }
-puts  content.gsub!('[/NOTE]', '[/note]')
+content.gsub!('[/NOTE]', '[/note]')
 
+# [tip]
+content.gsub!(/(\[tip\][а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[TIP]', '[tip]')
+# [/tip]
+content.gsub!(/(\[\/tip\] [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[/TIP]', '[/tip]')
+
+# [warning]
+content.gsub!(/(\[warning\][а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[WARNING]', '[warning]')
+# [/warning]
+content.gsub!(/(\[\/warning\] [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[/WARNING]', '[/warning]')
+
+# [important]
+content.gsub!(/(\[important\][а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[IMPORTANT]', '[important]')
+# [/important]
+content.gsub!(/(\[\/important\] [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[/IMPORTANT]', '[/important]')
+
+# [help]
+content.gsub!(/(\[help\][а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[HELP]', '[help]')
+# [/help]
+content.gsub!(/(\[\/help\] [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('[/HELP]', '[/help]')
+ 
+puts content
 puts "---------С большой буквы"
 
 #puts "Финальный"
