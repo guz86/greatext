@@ -313,6 +313,8 @@ content.gsub!('<li> ', '<li>')
 # ПОПРАВИТЬ ПРОБЕЛ <td>
 content.gsub!('<td> ', '<td>')
 
+# ПОПРАВИТЬ ПРОБЕЛ [note]
+content.gsub!('[note] ', '[note]')
 
 
 #ПУНКТ 4. Исправляем маленькие буквы перед знаками препинания и тегами на большие
@@ -353,7 +355,7 @@ content.gsub!(/(<h3>[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<H3>', '<h3>')
 # [note]
 content.gsub!(/(\[note\][а-я])/){ $1.to_s.mb_chars.upcase }
-puts  content.gsub!('[NOTE]', '[note]')
+content.gsub!('[NOTE]', '[note]')
 # [/note]
 content.gsub!(/(\[\/note\] [а-я])/){ $1.to_s.mb_chars.upcase }
 puts  content.gsub!('[/NOTE]', '[/note]')
