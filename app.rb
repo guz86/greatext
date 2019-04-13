@@ -112,6 +112,9 @@ content.gsub!(/\bлишь\b/, '')
 content.gsub!(/\bв том случае, \b/, '')
 content.gsub!(/\bв том случае\b/, '')
 
+content.gsub!(/\bв этих случаях, \b/, '')
+content.gsub!(/\bв этих случаях\b/, '')
+
 content.gsub!(/\bв данном случае, \b/, '')
 content.gsub!(/\bв данном случае\b/, '')
 
@@ -143,10 +146,10 @@ content.gsub!(/\bизвестно, что\b/, '')
 content.gsub!(/\bизвестно что\b/, '')
 
 content.gsub!(/\bв любом случае, \b/, '')
-content.gsub!(/\bв любом случае \b/, '')
+content.gsub!(/\bв любом случае\b/, '')
 
 content.gsub!(/\bплюс ко всему, \b/, '')
-content.gsub!(/\bплюс ко всему \b/, '')
+content.gsub!(/\bплюс ко всему\b/, '')
 
 content.gsub!(/\bжелаемых результатов\b/, 'результатов')
 content.gsub!(/\bжелаемые результаты\b/, 'результаты')
@@ -154,30 +157,30 @@ content.gsub!(/\bжелаемые результаты\b/, 'результаты
 content.gsub!(/\bна сегодняшний день \b/, '')
 
 content.gsub!(/\bк сожалению, \b/, '')
-content.gsub!(/\bк сожалению \b/, '')
+content.gsub!(/\bк сожалению\b/, '')
 
 content.gsub!(/\bодна из самых\b/, 'одна из')
 
 content.gsub!(/\bзачастую, \b/, '')
-content.gsub!(/\bзачастую \b/, '')
+content.gsub!(/\bзачастую\b/, '')
 
 content.gsub!(/\bв результате чего\b/, 'в результате')
 
 content.gsub!(/\bна протяжении всего времени\b/, 'на протяжении')
 
-content.gsub!(/\bв большинстве случаев \b/, '')
+content.gsub!(/\bв большинстве случаев\b/, '')
 
 content.gsub!(/\bпользуются популярностью\b/, 'популярны')
 
 content.gsub!(/\bславится своей\b/, 'славится')
 
 content.gsub!(/\bв частности, \b/, '')
-content.gsub!(/\bв частности \b/, '')
+content.gsub!(/\bв частности\b/, '')
 
 content.gsub!(/\bналичии проблем\b/, 'пробемах')
 
 content.gsub!(/\bкак правило, \b/, '')
-content.gsub!(/\bкак правило \b/, '')
+content.gsub!(/\bкак правило\b/, '')
 
 content.gsub!(/\bявляется результатом\b/, 'результат')
 
@@ -192,10 +195,10 @@ content.gsub!(/\bнекоторых людей\b/, 'некоторых')
 content.gsub!(/\bкроется в\b/, 'в')
 
 content.gsub!(/\bпо мере того, \b/, '')
-content.gsub!(/\bпо мере того \b/, '')
+content.gsub!(/\bпо мере того\b/, '')
 
 content.gsub!(/\bнесомненно, \b/, '')
-content.gsub!(/\bнесомненно \b/, '')
+content.gsub!(/\bнесомненно\b/, '')
 
 content.gsub!(/\bвследствие чего\b/, '')
 
@@ -211,6 +214,7 @@ content.gsub!(/\bнеобходимо помнить о том что\b/, '')
  
 content.gsub!(/\bосновного приема пищи\b/, 'еды')
 content.gsub!(/\bприема пищи\b/, 'еды')
+content.gsub!(/\bприем пищи\b/, 'питание')
 
 content.gsub!(/\bспециализированного оборудования\b/, 'оборудования')
 
@@ -241,6 +245,27 @@ content.gsub!(/\bвышеуказанный\b/, 'этот')
 
 content.gsub!(/\bс каждым днем\b/, '')
 
+content.gsub!(/\bможет быть связано\b/, 'связано')
+
+content.gsub!(/\bусугубит ситуацию\b/, 'усугубит положение')
+
+content.gsub!(/\bобратиться к специалистам\b/, 'обратиться за помощью')
+
+content.gsub!(/\bкак следствием\b/, 'следствием')
+
+content.gsub!(/\bвыходом из ситуации\b/, 'выходом')
+
+content.gsub!(/\bвключают в себя\b/, 'включают')
+
+content.gsub!(/\bнапрямую зависит\b/, 'зависит')
+
+content.gsub!(/\bнеобходимо учесть\b/, 'учитываются')
+
+content.gsub!(/\bв каждом конкретном случае\b/, '')
+content.gsub!(/\bв каждом случае\b/, '')
+
+content.gsub!(/\bможет привести к\b/, 'приводит к')
+
 
 
 # медицинские ошибки
@@ -270,7 +295,8 @@ content.gsub!(/\bстрессовая ситуация\b/, 'стресс')
 content.gsub!(/\bстрессовой ситуации\b/, 'стрессе')
 content.gsub!(/\bстрессовую ситуацию\b/, 'стресс')
 content.gsub!(/\bс такими заболеваниями, как\b/, 'с заболеваниями')
-content.gsub!(/\bизлечению\b/, 'лечению')
+content.gsub!(/\bизлечению\b/, 'выздоровлению')
+content.gsub!(/\bизлечение\b/, 'выздоровление')
 content.gsub!(/\bполезных витаминов\b/, 'витаминов')
 content.gsub!(/\bполезные витамины\b/, 'витамины')
 content.gsub!(/\bполезный витамин\b/, 'витамин')
@@ -278,6 +304,14 @@ content.gsub!(/\bполезных свойств\b/, 'свойств')
 content.gsub!(/\bполезные свойства\b/, 'свойства')
 content.gsub!(/\bполезное свойство\b/, 'свойство')
 content.gsub!(/\bмногие пациенты\b/, 'пациенты')
+content.gsub!(/\bпричины возникновения\b/, 'причины')
+content.gsub!(/\bгорячительных напитков\b/, 'алкоголя')
+content.gsub!(/\bтело человека\b/, 'тело')
+content.gsub!(/\bспециализированное\b/, '')
+content.gsub!(/\bспециальной\b/, '')
+content.gsub!(/\bего назначении\b/, 'назначении')
+content.gsub!(/\bположительный эффект\b/, 'положительное действие')
+content.gsub!(/\bв стрессовых ситуациях\b/, 'при стрессе')
 
 
 # Проблема съедает часть слова
@@ -292,193 +326,208 @@ content.gsub!(/\bмногие пациенты\b/, 'пациенты')
 #putscontent.gsub!(/\bОптимальная\b/, '')
 
 content.gsub!(/Таким образом, \b/, '')
-content.gsub!(/Таким образом \b/, '')
+content.gsub!(/Таким образом\b/, '')
 
 content.gsub!(/Кстати, \b/, '')
-content.gsub!(/Кстати \b/, '')
+content.gsub!(/Кстати\b/, '')
 
 content.gsub!(/Лучше всего, \b/, 'Лучше ')
-content.gsub!(/Лучше всего \b/, 'Лучше ')
+content.gsub!(/Лучше всего\b/, 'Лучше')
 
 content.gsub!(/Чаще всего, \b/, 'Чаще ')
-content.gsub!(/Чаще всего \b/, 'Чаще ')
+content.gsub!(/Чаще всего\b/, 'Чаще')
 
 content.gsub!(/Прежде всего, \b/, '')
-content.gsub!(/Прежде всего \b/, '')
+content.gsub!(/Прежде всего\b/, '')
 
 content.gsub!(/Кроме этого, \b/, '')
-content.gsub!(/Кроме этого \b/, '')
+content.gsub!(/Кроме этого\b/, '')
 
 content.gsub!(/Кроме того, \b/, '')
-content.gsub!(/Кроме того \b/, '')
+content.gsub!(/Кроме того\b/, '')
 
 content.gsub!(/А также, \b/, '')
-content.gsub!(/А также \b/, '')
+content.gsub!(/А также\b/, '')
 
 content.gsub!(/Также, \b/, '')
-content.gsub!(/Также \b/, '')
+content.gsub!(/Также\b/, '')
 
 content.gsub!(/При этом, \b/, '')
-content.gsub!(/При этом \b/, '')
+content.gsub!(/При этом\b/, '')
 
 content.gsub!(/Следует учесть, что \b/, '')
-content.gsub!(/Следует учесть что \b/, '')
+content.gsub!(/Следует учесть что\b/, '')
 
 content.gsub!(/Следует знать, что \b/, '')
-content.gsub!(/Следует знать что \b/, '')
+content.gsub!(/Следует знать что\b/, '')
 
 content.gsub!(/Следует помнить, что \b/, '')
-content.gsub!(/Следует помнить что \b/, '')
+content.gsub!(/Следует помнить что\b/, '')
 
 content.gsub!(/Следует заметить, что \b/, '')
-content.gsub!(/Следует заметить что \b/, '')
+content.gsub!(/Следует заметить что\b/, '')
 
 content.gsub!(/В этом случае, \b/, '')
-content.gsub!(/В этом случае \b/, '')
+content.gsub!(/В этом случае\b/, '')
 
 content.gsub!(/В таком случае, \b/, '')
-content.gsub!(/В таком случае \b/, '')
+content.gsub!(/В таком случае\b/, '')
 
 content.gsub!(/В такой ситуации, \b/, '')
-content.gsub!(/В такой ситуации \b/, '')
+content.gsub!(/В такой ситуации\b/, '')
 
 content.gsub!(/В этой ситуации, \b/, '')
-content.gsub!(/В этой ситуации \b/, '')
+content.gsub!(/В этой ситуации\b/, '')
+
+content.gsub!(/В этих случаях, \b/, '')
+content.gsub!(/В этих случаях\b/, '')
 
 content.gsub!(/После этого периода, \b/, '')
-content.gsub!(/После этого периода \b/, '')
+content.gsub!(/После этого периода\b/, '')
 
 content.gsub!(/После этого срока, \b/, '')
 content.gsub!(/После этого срока \b/, '')
 
 content.gsub!(/После этого, \b/, '')
-content.gsub!(/После этого \b/, '')
+content.gsub!(/После этого\b/, '')
 
 content.gsub!(/Из-за этого, \b/, '')
-content.gsub!(/Из-за этого \b/, '')
+content.gsub!(/Из-за этого\b/, '')
 
 content.gsub!(/Помимо этого, \b/, '')
-content.gsub!(/Помимо этого \b/, '')
+content.gsub!(/Помимо этого\b/, '')
 
 content.gsub!(/Тем не менее, \b/, '')
-content.gsub!(/Тем не менее \b/, '')
+content.gsub!(/Тем не менее\b/, '')
 
 content.gsub!(/Для того, \b/, '')
-content.gsub!(/Для того \b/, '')
+content.gsub!(/Для того\b/, '')
 
-content.gsub!(/Весьма \b/, '')
+content.gsub!(/Весьма\b/, '')
 
-content.gsub!(/Очень \b/, '')
+content.gsub!(/Очень\b/, '')
 
-content.gsub!(/Всего лишь \b/, '')
+content.gsub!(/Всего лишь\b/, '')
 
-content.gsub!(/Лишь \b/, '')
+content.gsub!(/Лишь\b/, '')
 
 content.gsub!(/В том случае, \b/, '')
-content.gsub!(/В том случае \b/, '')
+content.gsub!(/В том случае\b/, '')
 
 content.gsub!(/В данном случае, \b/, '')
-content.gsub!(/В данном случае \b/, '')
+content.gsub!(/В данном случае\b/, '')
 
 content.gsub!(/В таких случаях, \b/, '')
-content.gsub!(/В таких случаях \b/, '')
+content.gsub!(/В таких случаях\b/, '')
 
-content.gsub!(/Какого-либо \b/, '')
+content.gsub!(/Какого-либо\b/, '')
 
-content.gsub!(/Сегодня \b/, '')
+content.gsub!(/Сегодня\b/, '')
 
-content.gsub!(/Именно \b/, '')
+content.gsub!(/Именно\b/, '')
 
 content.gsub!(/Не редко, \b/, '')
-content.gsub!(/Не редко \b/, '')
+content.gsub!(/Не редко\b/, '')
 
 content.gsub!(/Нередко, \b/, '')
-content.gsub!(/Нередко \b/, '')
+content.gsub!(/Нередко\b/, '')
 
 content.gsub!(/Впрочем, \b/, '')
-content.gsub!(/Впрочем \b/, '')
+content.gsub!(/Впрочем\b/, '')
 
 content.gsub!(/В наше время, \b/, '')
-content.gsub!(/В наше время \b/, '')
+content.gsub!(/В наше время\b/, '')
 
-content.gsub!(/Практически \b/, '')
+content.gsub!(/Практически\b/, '')
 
 content.gsub!(/На самом деле, \b/, '')
-content.gsub!(/На самом деле \b/, '')
+content.gsub!(/На самом деле\b/, '')
 
-content.gsub!(/Стоит отметить, что \b/, '')
-content.gsub!(/Стоит отметить что \b/, '')
+content.gsub!(/Стоит отметить, что\b/, '')
+content.gsub!(/Стоит отметить что\b/, '')
 
-content.gsub!(/Известно, что \b/, '')
-content.gsub!(/Известно что \b/, '')
+content.gsub!(/Известно, что\b/, '')
+content.gsub!(/Известно что\b/, '')
 
 content.gsub!(/В любом случае, \b/, '')
-content.gsub!(/В любом случае \b/, '')
+content.gsub!(/В любом случае\b/, '')
 
 content.gsub!(/Плюс ко всему, \b/, '')
-content.gsub!(/Плюс ко всему \b/, '')
+content.gsub!(/Плюс ко всему\b/, '')
 
 content.gsub!(/На сегодняшний день \b/, '')
 
 content.gsub!(/К сожалению, \b/, '')
-content.gsub!(/К сожалению \b/, '')
+content.gsub!(/К сожалению\b/, '')
 
 content.gsub!(/Как правило, \b/, '')
-content.gsub!(/Как правило \b/, '')
+content.gsub!(/Как правило\b/, '')
 
 content.gsub!(/Одна из самых\b/, 'Одна из')
 
 content.gsub!(/Зачастую, \b/, '')
-content.gsub!(/Зачастую \b/, '')
+content.gsub!(/Зачастую\b/, '')
 
-content.gsub!(/В результате чего \b/, '')
+content.gsub!(/В результате чего\b/, '')
 
 content.gsub!(/Оказывается, \b/, '')
-content.gsub!(/Оказывается \b/, '')
+content.gsub!(/Оказывается\b/, '')
 
 content.gsub!(/В большинстве случаев \b/, '')
 
-content.gsub!(/Важно помнить, что \b/, '')
-content.gsub!(/Важно помнить что \b/, '')
-content.gsub!(/Важно помнить: \b/, '')
+content.gsub!(/Важно помнить, что\b/, '')
+content.gsub!(/Важно помнить что\b/, '')
+content.gsub!(/Важно помнить:\b/, '')
 
-content.gsub!(/Принято считать, что \b/, '')
-content.gsub!(/Принято считать что \b/, '')
+content.gsub!(/Принято считать, что\b/, '')
+content.gsub!(/Принято считать что\b/, '')
 
-content.gsub!(/На самом деле \b/, '')
+content.gsub!(/На самом деле\b/, '')
 
 content.gsub!(/Далее, \b/, '')
-content.gsub!(/Далее \b/, '')
+content.gsub!(/Далее\b/, '')
 
 content.gsub!(/По мере того, \b/, '')
-content.gsub!(/По мере того \b/, '')
+content.gsub!(/По мере того\b/, '')
 
 content.gsub!(/Несомненно, \b/, '')
-content.gsub!(/Несомненно \b/, '')
+content.gsub!(/Несомненно\b/, '')
 
 content.gsub!(/Причем, \b/, '')
-content.gsub!(/Причем \b/, '')
+content.gsub!(/Причем\b/, '')
 
-content.gsub!(/Поэтому \b/, '')
+content.gsub!(/Поэтому\b/, '')
 
-content.gsub!(/К нему \b/, '')
+content.gsub!(/К нему\b/, '')
 
-content.gsub!(/Необходимо помнить о том, что \b/, '')
-content.gsub!(/Необходимо помнить о том что \b/, '')
+content.gsub!(/Необходимо помнить о том, что\b/, '')
+content.gsub!(/Необходимо помнить о том что\b/, '')
 
 content.gsub!(/Безусловно, \b/, '')
-content.gsub!(/Безусловно \b/, '')
+content.gsub!(/Безусловно\b/, '')
 
-content.gsub!(/Особого \b/, '')
-content.gsub!(/Особую \b/, '')
+content.gsub!(/Особого\b/, '')
+content.gsub!(/Особую\b/, '')
 
 content.gsub!(/Многие пациенты, \b/, 'Пациенты, ')
-content.gsub!(/Многие пациенты \b/, 'Пациенты ')
+content.gsub!(/Многие пациенты\b/, 'Пациенты')
 
-content.gsub!(/Вышеуказанный \b/, 'Этот ')
+content.gsub!(/Вышеуказанный\b/, 'Этот')
 
+content.gsub!(/Причины возникновения\b/, 'Причины')
 
+content.gsub!(/Проблема\b/, 'Эта проблема')
 
+content.gsub!(/Примечательно, \b/, '')
+content.gsub!(/Примечательно\b/, '')
+
+content.gsub!(/Излечение\b/, 'Выздоровление')
+
+content.gsub!(/Прием пищи\b/, 'Питание')
+
+content.gsub!(/В стрессовых ситуациях\b/, 'При стрессе')
+
+content.gsub!(/Наиболее часто\b/, 'Часто')
 
 #########
 
