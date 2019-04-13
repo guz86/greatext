@@ -189,6 +189,15 @@ content.gsub!(/\bдолгое время\b/, 'долго')
 
 content.gsub!(/\bнекоторых людей\b/, 'некоторых')
 
+content.gsub!(/\bкроется в\b/, 'в')
+
+content.gsub!(/\bпо мере того, \b/, '')
+content.gsub!(/\bпо мере того \b/, '')
+
+content.gsub!(/\bнесомненно, \b/, '')
+content.gsub!(/\bнесомненно \b/, '')
+
+
 
 # медицинские ошибки
 content.gsub!(/\bмедикаментозных\b/, '')
@@ -208,7 +217,13 @@ content.gsub!(/\bнедугам\b/, 'болезням')
 content.gsub!(/\bнедугами\b/, 'болезнями')
 content.gsub!(/\bнедугах\b/, 'болезнях')
 content.gsub!(/\bвсех болезней\b/, 'болезней')
-
+content.gsub!(/\bкожи тела\b/, 'кожи')
+content.gsub!(/\bкоже тела\b/, 'коже')
+content.gsub!(/\bкожа тела\b/, 'кожа')
+content.gsub!(/\bстрессовых ситуаций\b/, 'стресса')
+content.gsub!(/\bстрессовая ситуация\b/, 'стресс')
+content.gsub!(/\bстрессовой ситуации\b/, 'стрессе')
+content.gsub!(/\bстрессовую ситуацию\b/, 'стресс')
 
 # Проблема съедает часть слова
 # putscontent.gsub!('боч', '') 
@@ -380,6 +395,13 @@ content.gsub!(/На самом деле \b/, '')
 
 content.gsub!(/Далее, \b/, '')
 content.gsub!(/Далее \b/, '')
+
+content.gsub!(/По мере того, \b/, '')
+content.gsub!(/По мере того \b/, '')
+
+content.gsub!(/Несомненно, \b/, '')
+content.gsub!(/Несомненно \b/, '')
+
 
 #########
 
