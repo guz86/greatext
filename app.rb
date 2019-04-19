@@ -1850,7 +1850,7 @@ content.gsub!(/(<strong>[а-я])/){ $1.to_s.mb_chars.upcase }
 #content.gsub!(/(<STRONG>)/){ $1.to_s.mb_chars.downcase }
 content.gsub!('<STRONG>', '<strong>')
 # </strong>
-content.gsub!(/(<\/strong> [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(.<\/strong> [а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('</STRONG>', '</strong>')
 # <li>
 content.gsub!(/(<li>[а-я])/){ $1.to_s.mb_chars.upcase }
