@@ -1321,7 +1321,7 @@ content.gsub!(/\bтаких продуктов, как\b/, 'продуктов -
 content.gsub!(/\bосновательно ознакомиться\b/, 'ознакомиться')
 content.gsub!(/\bтакие травы, как\b/, 'травы -')
 content.gsub!(/\bваши старания\b/, 'старания')
-
+content.gsub!(/\bказалось бы\b/, '')
 
 
 
@@ -2070,6 +2070,8 @@ content.gsub!(/Многие из нас\b/, 'Многие')
 
 content.gsub!(/Он способствует\b/, 'Способствует')
 
+content.gsub!(/Потому что, /, '')
+
 content.gsub!(/Потому что\b/, '')
 
 content.gsub!(/Следует отказаться\b/, 'Откажитесь')
@@ -2180,14 +2182,18 @@ content.gsub!(',,', ',')
 content.gsub!('...', '.')
 content.gsub!('..', '.')
 content.gsub!('.,', '.')
+content.gsub!('. ,', '.')
 content.gsub!(', :', ':')
 content.gsub!('- :', ':')
 content.gsub!('- -', '-')
 content.gsub!('-:', ':')
+content.gsub!('- :', ':')
 content.gsub!('- ,', '-')
 content.gsub!(': ,', ':')
 content.gsub!(', -', '-')
 content.gsub!('-,', '-')
+content.gsub!('- ,', '-')
+
 
 # ПОПРАВИТЬ ПРОБЕЛ ЗАПЯТАЯ !!!!!!!!!!
 content.gsub!(' ,', ',')
