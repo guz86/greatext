@@ -360,6 +360,7 @@ content.gsub!(/\bмножества различных\b/, 'различных')
 
 content.gsub!(/\bвышеуказанный\b/, 'этот')
 content.gsub!(/\bвышеописанных\b/, 'этих')
+content.gsub!(/\bвышеуказанных\b/, 'этих')
 content.gsub!(/\bвышеуказанные\b/, 'эти')
 content.gsub!(/\bвышеописанные\b/, 'эти')
 content.gsub!(/\bописанный выше\b/, '')
@@ -1352,6 +1353,33 @@ content.gsub!(/\bданных условий\b/, 'этих условий')
 content.gsub!(/\bявляется идеальным вариантом\b/, 'это вариант')
 content.gsub!(/\bследует ознакомиться\b/, 'ознакомьтесь')
 content.gsub!(/\bи т.д./, '.')
+content.gsub!(/\bсогласно инструкции\b/, 'в инструкции')
+content.gsub!(/\bвоздействует\b/, 'действует')
+content.gsub!(/\bбыстрый и эффективный\b/, 'быстрый')
+content.gsub!(/\bвсю необходимую информацию\b/, 'всю информацию')
+content.gsub!(/\bсерьезные последствия\b/, 'последствия')
+content.gsub!(/\bк серьезным последствиям\b/, 'к последствиям')
+content.gsub!(/\bнет необходимости\b/, 'не нужно')
+content.gsub!(/\bкрохи\b/, 'ребенка')
+content.gsub!(/\bспустя\b/, 'через')
+content.gsub!(/\bмаленьких детей\b/, 'детей')
+content.gsub!(/\bсчитаются подходящим вариантом\b/, 'считаются подходящими')
+content.gsub!(/\bсчитается подходящим вариантом\b/, 'считается подходящим')
+content.gsub!(/\bне ощущают дискомфорт\b/, 'не испытывают дискомфорт')
+content.gsub!(/\bгласит\b/, 'указывает')
+content.gsub!(/\bмаленького пациента\b/, 'ребенка')
+content.gsub!(/\bданный препарат\b/, 'этот препарат')
+content.gsub!(/\bперед началом использования\b/, 'перед пользованием')
+content.gsub!(/\bне оказывает влияния\b/, 'не влияет')
+content.gsub!(/\bразрешается использовать\b/, 'разрешено использовать')
+content.gsub!(/\bв каждом отдельном случае\b/, 'в разных случаях')
+content.gsub!(/\bдругих опасных заболеваний\b/, 'других заболеваний')
+content.gsub!(/\bво много зависит от\b/, 'зависит от')
+content.gsub!(/\bвызовет негативные последствия\b/, 'вызовет последствия')
+
+
+
+
 
 # Проблема съедает часть слова
 # putscontent.gsub!('боч', '') 
@@ -2244,7 +2272,7 @@ content.gsub!(/Все знают что\b/, '')
 content.gsub!(/К их преимуществам относятся\b/, 'Их преимущества -')
 
 
-
+content.gsub!(/Сама по себе\b/, '')
 
 
 
@@ -2367,8 +2395,8 @@ content.gsub!(/(<strong>[а-я])/){ $1.to_s.mb_chars.upcase }
 #content.gsub!(/(<STRONG>)/){ $1.to_s.mb_chars.downcase }
 content.gsub!('<STRONG>', '<strong>')
 # </strong>
-content.gsub!(/(.<\/strong> [а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('</STRONG>', '</strong>')
+content.gsub!(/(\.<\/strong> [а-я])/){ $1.to_s.mb_chars.upcase }
+ content.gsub!('</STRONG>', '</strong>')
 # <li>
 content.gsub!(/(<li>[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<LI>', '<li>')
@@ -2440,7 +2468,7 @@ content.gsub!('См.', 'см.')
 content.gsub!('Ложек', 'ложек')
 content.gsub!('Ложку', 'ложку')
 content.gsub!('Ложки', 'ложки')
-
+content.gsub!('Ложка', 'ложка')
 
 #content.gsub!(/(\d, \d)/){ '\1'} content.gsub(/(\d)/, '')
 #puts "some3random5string8".gsub(/(\d)/, '\1 ')
