@@ -237,8 +237,9 @@ content.gsub!(/\bна самом деле\b/, '')
 content.gsub!(/\bстоит отметить, что\b/, '')
 content.gsub!(/\bстоит отметить что\b/, '')
 
-content.gsub!(/\bизвестно, что\b/, '')
-content.gsub!(/\bизвестно что\b/, '')
+# Многим известно, что
+#content.gsub!(/\bизвестно, что\b/, '')
+#content.gsub!(/\bизвестно что\b/, '')
 content.gsub!(/\bкак известно, /, '')
  
 
@@ -576,7 +577,7 @@ content.gsub!(/\bчерез определенное время\b/, 'скоро'
 
 content.gsub!(/\bпредставленная в виде\b/, 'в виде')
 
-content.gsub!(/\bнекоторые люди\b/, 'некоторые')
+content.gsub!(/\bнекоторые люди/, 'некоторые')
 
 content.gsub!(/\bденежных средств\b/, 'денег')
 
@@ -905,6 +906,7 @@ content.gsub!(/\bза счет того, что\b/, 'из-за того, что'
 content.gsub!(/, как в\b/, ' в')
 content.gsub!(/\bможно как в\b/, 'можно в')
 content.gsub!(/, так и в\b/, ' и в')
+content.gsub!(/\bкак плюсы\b/, 'плюсы')
 
 content.gsub!(/\bсамо по себе\b/, '')
 
@@ -1065,6 +1067,10 @@ content.gsub!(/\bпроведение следующих этапов:/, 'про
 content.gsub!(/\bпервым делом\b/, 'вначале')
 
 content.gsub!(/\bне заставит долго ждать\b/, 'появится')
+content.gsub!(/\bне заставит себя долго ждать\b/, 'появится')
+content.gsub!(/\bне заставят себя ждать\b/, 'появятся')
+content.gsub!(/\bне заставят себя долго ждать\b/, 'появятся')
+
 
 content.gsub!(/\bстоль частых\b/, 'частых')
 
@@ -1425,6 +1431,7 @@ content.gsub!(/\bявляются причиной\b/, 'это причина')
 content.gsub!(/\bнеобходимо обратить внимание\b/, 'обратите внимание')
 content.gsub!(/\bважно обратить внимание на\b/, 'обратите внимание')
 content.gsub!(/\bзаострите внимание\b/, 'обратите внимание')
+content.gsub!(/\bстоит обращать внимание\b/, 'обратите внимание')
 content.gsub!(/\bнеобходимо исключить\b/, 'исключите')
 content.gsub!(/\bнеобходимо использовать\b/, 'используйте')
 content.gsub!(/\bособое внимание\b/, 'внимание')
@@ -2192,6 +2199,16 @@ content.gsub!(/\bраствора из\b/, 'раствора -')
 content.gsub!(/\bс помощью которых осуществляется\b/, 'с их помощью осуществляется')
 content.gsub!(/\bкомфорта ношения\b/, 'комфорта при ношении')
 content.gsub!(/\bосновой которого являются\b/, 'основа -')
+content.gsub!(/\bдостигается путем\b/, 'достигается с помощью')
+content.gsub!(/\bявляется профилактикой\b/, 'это профилактика')
+content.gsub!(/\bприступать к процедуре нанесения\b/, 'приступать к нанесению')
+content.gsub!(/\bвредных внешних воздействий\b/, 'вредных воздействий')
+content.gsub!(/\bчасто использующие\b/, 'использующие')
+content.gsub!(/\bкоторые специализируются на производстве\b/, 'которые участвуют в производстве')
+content.gsub!(/\bоб этой проблеме можно забыть\b/, 'можно забыть о проблеме')
+
+
+
 
 
 
@@ -2780,6 +2797,8 @@ content.gsub!(/Такого рода\b/, '')
 content.gsub!(/Стоит рассмотреть\b/, 'Рассмотрим')
 
 content.gsub!(/По истечению некоторого времени\b/, 'Позже')
+content.gsub!(/По истечению времени\b/, 'По истечении времени')
+
 
 content.gsub!(/Положительные результаты\b/, 'Результаты')
 content.gsub!(/Положительный результат\b/, 'Результат')
@@ -3359,6 +3378,18 @@ content.gsub!(/Ошибочно\b/, 'Неправильно')
 
 content.gsub!(/Попробуем разобраться\b/, 'Разберемся')
 
+content.gsub!(/Многим известно, что /, '')
+
+content.gsub!(/Свои\b/, '')
+
+content.gsub!(/Вследствие чего, /, '')
+
+content.gsub!(/Никому не хочется\b/, 'Никто не хочет')
+
+content.gsub!(/Основную пользу\b/, 'Пользу')
+
+
+
 
 
 
@@ -3508,39 +3539,39 @@ content.gsub!('ALT="', 'alt="')
 content.gsub!(/(title="[а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('TITLE="', 'title="')
 # [note]
-content.gsub!(/(\[note\][а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[NOTE]', '[note]')
+#content.gsub!(/(\[note\][а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[NOTE]', '[note]')
 # [/note]
-content.gsub!(/(\[\/note\] [а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[/NOTE]', '[/note]')
-
+#content.gsub!(/(\[\/note\] [а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[/NOTE]', '[/note]')
 # [tip]
-content.gsub!(/(\[tip\][а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[TIP]', '[tip]')
+#content.gsub!(/(\[tip\][а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[TIP]', '[tip]')
 # [/tip]
-content.gsub!(/(\[\/tip\] [а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[/TIP]', '[/tip]')
-
+#content.gsub!(/(\[\/tip\] [а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[/TIP]', '[/tip]')
 # [warning]
-content.gsub!(/(\[warning\][а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[WARNING]', '[warning]')
+#content.gsub!(/(\[warning\][а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[WARNING]', '[warning]')
 # [/warning]
-content.gsub!(/(\[\/warning\] [а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[/WARNING]', '[/warning]')
-
+#content.gsub!(/(\[\/warning\] [а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[/WARNING]', '[/warning]')
 # [important]
-content.gsub!(/(\[important\][а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[IMPORTANT]', '[important]')
+#content.gsub!(/(\[important\][а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[IMPORTANT]', '[important]')
 # [/important]
-content.gsub!(/(\[\/important\] [а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[/IMPORTANT]', '[/important]')
-
+#content.gsub!(/(\[\/important\] [а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[/IMPORTANT]', '[/important]')
 # [help]
-content.gsub!(/(\[help\][а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[HELP]', '[help]')
+#content.gsub!(/(\[help\][а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[HELP]', '[help]')
 # [/help]
-content.gsub!(/(\[\/help\] [а-я])/){ $1.to_s.mb_chars.upcase }
-content.gsub!('[/HELP]', '[/help]')
+#content.gsub!(/(\[\/help\] [а-я])/){ $1.to_s.mb_chars.upcase }
+#content.gsub!('[/HELP]', '[/help]')
+
+# общий вариант для первой буквы перед кавычкой, с пробелом и без ]
+content.gsub!(/(\] [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(\][а-я])/){ $1.to_s.mb_chars.upcase }
 
 # [\n]
 content.gsub!(/(\\n [а-я])/){ $1.to_s.mb_chars.upcase }
