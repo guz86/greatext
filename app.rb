@@ -764,6 +764,7 @@ content.gsub!(/\bв случае с\b/, 'с')
 content.gsub!(/\b1-го\b/, '1')
 content.gsub!(/\b2х\b/, '2')
 content.gsub!(/\b3-х\b/, '3')
+content.gsub!(/\bтрехлетнего возраста\b/, 'возраста 3 лет')
 content.gsub!(/\b2-х\b/, '2')
 content.gsub!(/\b2-летний период\b/, 'период 2 года')
 content.gsub!(/\bдвухлетнего возраста\b/, 'возраста 2 лет')
@@ -898,8 +899,8 @@ content.gsub!(/\bсреди которых\b/, '')
 
 content.gsub!(/\bможно выделить\b/, 'выделяют')
 
-content.gsub!(/\bкоторая характеризуется\b/, 'характеризуется')
-content.gsub!(/\bкоторый характеризуется\b/, 'характеризуется')
+content.gsub!(/\bкоторая характеризуется\b/, 'она характеризуется')
+content.gsub!(/\bкоторый характеризуется\b/, 'он характеризуется')
 
 content.gsub!(/\bи вовсе\b/, '')
 
@@ -1717,7 +1718,7 @@ content.gsub!(/\bкрайне\b/, '')
 content.gsub!(/\bследует использовать\b/, 'используйте')
 content.gsub!(/\bбудут являться\b/, 'являются')
 content.gsub!(/\bпроцесс регенерации\b/, 'регенерацию')
-content.gsub!(/\bкоторый поможет вам избавиться от\b/, 'избавит вас от')
+content.gsub!(/\bкоторый поможет вам избавиться от\b/, 'он избавит вас от')
 content.gsub!(/\bв нашей жизни\b/, 'в жизни')
 content.gsub!(/\bв таких продуктах как\b/, 'в продуктах')
 content.gsub!(/\bв таких продуктах, как\b/, 'в продуктах')
@@ -2391,6 +2392,7 @@ content.gsub!(/\bцветовая палитра\b/, 'цвета')
 content.gsub!(/\bописаны выше\b/, 'описаны')
 content.gsub!(/\bописано выше\b/, 'описано')
 content.gsub!(/\bописанным выше\b/, 'описанным')
+content.gsub!(/\bвышеупомянутая\b/, 'упомянутая')
 content.gsub!(/\bиндикатор\b/, 'сигнал')
 content.gsub!(/\bпомогут решить\b/, 'решат')
 content.gsub!(/\bо собственном здоровье\b/, 'о здоровье')
@@ -3777,7 +3779,8 @@ content.gsub!(/\bс данным патологическим процессом
 content.gsub!(/\bмаксимальную эффективность\b/, 'эффективность')
 content.gsub!(/\bна процессе лечения\b/, 'на лечении')
 content.gsub!(/\bакцентировать внимание\b/, 'заострить внимание')
-content.gsub!(/\bодного из этих патологических процессов\b/, 'одной из этих паталогий')
+content.gsub!(/\bодного из этих патологических процессов\b/, 'одной из этих патологий')
+content.gsub!(/\bпатологических процессов\b/, 'патологий')
 content.gsub!(/, к которым следует отнести:/, ':')
 content.gsub!(/\bпредназначен для использования\b/, 'используется')
 content.gsub!(/\bэто один из лидеров\b/, 'на первых местах')
@@ -3876,7 +3879,8 @@ content.gsub!(/\bблизких людей\b/, 'близких')
 content.gsub!(/\bнезамедлительное\b/, 'немедленное')
 content.gsub!(/\bкомплекс действий\b/, 'совокупность действий')
 content.gsub!(/\bконкретный заболевание\b/, 'заболевание')
-content.gsub!(/, который имеет\b/, ', имеет')
+content.gsub!(/, который имеет\b/, ', он имеет')
+content.gsub!(/, которые подходят\b/, ', они подходят')
 content.gsub!(/\bвозрастать до\b/, 'вырасти до')
 content.gsub!(/\bспособно привести к\b/, 'приводит к')
 content.gsub!(/\bв комбинации с\b/, 'в совокупности с')
@@ -3910,8 +3914,25 @@ content.gsub!(/\bтак называемым\b/, '')
 content.gsub!(/\bтак называемая\b/, '')
 content.gsub!(/\bтак называемый\b/, '')
 content.gsub!(/, которые включают\b/, ', они включают')
-
-
+content.gsub!(/\bв первую очередь следует\b/, 'сначала следует')
+content.gsub!(/\bимеют риск\b/, 'имеют вероятность')
+content.gsub!(/\bмогут выступать:/, 'могут быть:')
+content.gsub!(/\bдермы\b/, 'кожи')
+content.gsub!(/\bтребует серьезного подхода\b/, 'требует строгого подхода')
+content.gsub!(/\bполный список\b/, 'список')
+content.gsub!(/, которая применяется\b/, ', она применяется')
+content.gsub!(/\bвариант данного лекарства\b/, 'вариант лекарства')
+content.gsub!(/\bподходят для использования у людей\b/, 'подходят для людей')
+content.gsub!(/\bаналоги данного лекарства\b/, 'аналоги лекарства')
+content.gsub!(/\bесли имеется\b/, 'если есть')
+content.gsub!(/\bтаком грехе, как\b/, 'грехе -')
+content.gsub!(/\bне последнюю роль\b/, 'важную роль')
+content.gsub!(/\bтакого неприятного заболевания, как\b/, 'неприятного заболевания -')
+content.gsub!(/\bспособно вызвать осложнения\b/, 'вызывает осложнения')
+content.gsub!(/\bсрок хранения составляет\b/, 'срок хранения -')
+content.gsub!(/\bне оказывает эффект\b/, 'не действует')
+content.gsub!(/\bв избыточном количестве\b/, 'в большом количестве')
+content.gsub!(/\bнезаменимое\b/, 'нужное')
 
 
 
@@ -4733,6 +4754,7 @@ content.gsub!(/Объясняется это тем, что /, '')
 content.gsub!(/Объясняется это тем что /, '')
 
 content.gsub!(/Все это\b/, 'Это')
+content.gsub!(/Всё это\b/, 'Это')
 
 content.gsub!(/Так или иначе, /, '')
 
@@ -5301,6 +5323,8 @@ content.gsub!(/Выше указанные\b/, 'Эти')
 content.gsub!(/Выше описанные\b/, 'Эти')
 content.gsub!(/Выше указанными\b/, 'Этими')
 content.gsub!(/Ниже указанных\b/, 'Этих')
+content.gsub!(/Вышеупомянутая\b/, 'Эта')
+
 
 content.gsub!(/Специалисты утверждают, что /, '')
 
@@ -5932,11 +5956,17 @@ content.gsub!(/Перед выполнением работы\b/, 'Перед р
 
 content.gsub!(/Как таковых\b/, '')
 
+content.gsub!(/Важно посещать\b/, 'Посетите')
 
+content.gsub!(/У них имеются\b/, 'У них есть')
 
+content.gsub!(/В таких случаях\b/, 'Тогда')
 
+content.gsub!(/Несмотря на указанные факты, /, '')
 
+content.gsub!(/Предлагаем ознакомиться\b/, 'Ознакомьтесь')
 
+content.gsub!(/Незаменимое\b/, 'Нужное')
 
 
 
@@ -6054,6 +6084,17 @@ content.gsub!(/(^[а-я])/){ $1.to_s.mb_chars.upcase }
 # Исправляем маленькие в начале строки ! с пробелом
 content.gsub!(/(^ [а-я])/){ $1.to_s.mb_chars.upcase }
 
+#Для сейта где весь текст <p style="text-align: justify;"> содержит этот тег
+# Исправляем маленькие в начале строки <p style="text-align: justify;">
+content.gsub!(/(^<p style="text-align: justify;">[а-я])/){ $1.to_s.mb_chars.upcase }
+# Исправляем маленькие в начале строки ! с пробелом <p style="text-align: justify;">
+content.gsub!(/(^<p style="text-align: justify;"> [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('<P STYLE="TEXT-ALIGN: JUSTIFY;">', '<p style="text-align: justify;">')
+
+content.gsub!(/(<li style="text-align: justify;">[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(<li style="text-align: justify;"> [а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!('<LI STYLE="TEXT-ALIGN: JUSTIFY;">', '<li style="text-align: justify;">')
+
 
 
 # Исправляем маленькие в начале строки учитываем strong li h3 h2 [note]
@@ -6066,9 +6107,11 @@ content.gsub!(/(\.<\/strong> [а-я])/){ $1.to_s.mb_chars.upcase }
  content.gsub!('</STRONG>', '</strong>')
 # <li>
 content.gsub!(/(<li>[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(<li> [а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<LI>', '<li>')
 # <td>
 content.gsub!(/(<td>[а-я])/){ $1.to_s.mb_chars.upcase }
+content.gsub!(/(<td> [а-я])/){ $1.to_s.mb_chars.upcase }
 content.gsub!('<TD>', '<td>')
 # <h2>
 content.gsub!(/(<h2>[а-я])/){ $1.to_s.mb_chars.upcase }
